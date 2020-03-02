@@ -3,13 +3,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Dictionary {
-    public Dictionary (String[] args) {
+    public static void main(String[] args) {
+        // Ввод значения
         Scanner scanner = new Scanner(System.in);
         String inRomeDigit = scanner.next();
 
+        // Создание словаря
         Map<String, Integer> romeArabicDict = new HashMap<>();
 
-        //добавление элементов
+        //Добавление элементов
         romeArabicDict.put("I", 1);
         romeArabicDict.put("II", 2);
         romeArabicDict.put("III", 3);
@@ -21,7 +23,14 @@ public class Dictionary {
         romeArabicDict.put("IX", 9);
         romeArabicDict.put("X", 10);
 
-//        System.out.println(romeArabicDict.get(inRomeDigit));
+//        Проверяем на наличе в словаре
+        Integer value = romeArabicDict.get(inRomeDigit);
+        if (value != null) {
+            System.out.println(romeArabicDict.get(inRomeDigit)); //Если ввод есть, то печатае значение по ключу
+        } else {
+            System.out.println(inRomeDigit); // Если нет, то печатаем вводимое значение
+        }
     }
 }
+
 
