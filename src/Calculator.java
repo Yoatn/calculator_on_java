@@ -34,12 +34,15 @@ public class Calculator {
 //            System.out.println("Введите знак: ");
 //            char operand = reader.next().charAt(0);
 ////            System.out.println(operand);
+            // Считываем выражение
             System.out.println("Введите выражение: ");
             Scanner scanner = new Scanner(System.in);
-            String a = scanner.next();
+            String inputExpression = scanner.next();
 
-            String[] operators = a.split("[0-9]+");
-            String[] operands = a.split("[+/*-]");
+
+
+            String[] operators = inputExpression.split("[0-9]+"); // Находим цифры
+            String[] operands = inputExpression.split("[+/*-]");  // Находим операнд
             int agregate = Integer.parseInt(operands[0]);
             for (int i = 1; i < operands.length; i++) {
                 if (operators[i].equals("+"))
@@ -51,7 +54,7 @@ public class Calculator {
                 else
                     agregate -= Integer.parseInt(operands[i]);
             }
-//            System.out.println(agregate);
+            System.out.println(agregate);
         }
     }
 }
