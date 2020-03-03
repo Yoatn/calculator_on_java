@@ -41,8 +41,12 @@ public class Calculator {
 
 
 
+//            String[] operators = inputExpression.split("[0-9]+"); // Находим цифры
+//            String[] operands = inputExpression.split("[+/*-]");  // Находим операнд
+//
             String[] operators = inputExpression.split("[0-9]+"); // Находим цифры
             String[] operands = inputExpression.split("[+/*-]");  // Находим операнд
+
             int agregate = Integer.parseInt(operands[0]);
             for (int i = 1; i < operands.length; i++) {
                 if (operators[i].equals("+"))
