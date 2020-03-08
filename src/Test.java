@@ -39,29 +39,13 @@ public class Test {
             if (value_1 != null && value_2 != null) {
                 operand_1 = romeArabicDict.get(inputExpression[0]);
                 operand_2 = romeArabicDict.get(inputExpression[2]);
-//                char operator = inputExpression[1].charAt(0);
 
-//                System.out.println(operand_1);
-//                System.out.println(operand_2);
-//                System.out.println(operator);
-
-//                System.out.println(romeArabicDict.get(inputExpression[0])); //Если ввод есть, то печатае значение по ключу
-//                System.out.println(romeArabicDict.get(inputExpression[2]));
             } else {
                 operand_1 = Integer.parseInt(inputExpression[0]);
                 operand_2 = Integer.parseInt(inputExpression[2]);
-//                char operator = inputExpression[1].charAt(0);
-
-//                System.out.println(operand_1);
-//                System.out.println(operand_2);
-//                System.out.println(operator);
-
             }
-//            System.out.println("Значение 1: " + operand_1);
-//            System.out.println("Значение 2: " + operand_2);
-//            System.out.println("Знак: " + operator);
 
-
+            // Калькулятор
             switch (operator) {
                 case "+":
                     result = operand_1 + operand_2;
@@ -76,6 +60,8 @@ public class Test {
                     result = operand_1 / operand_2;
                     break;
             }
+
+            // Вывод результата
             System.out.println("________");
             System.out.println("Результат: " + result);
             System.out.println();
