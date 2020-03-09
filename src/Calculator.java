@@ -1,9 +1,3 @@
-//            String[] operators = inputExpression.split("[0-9]+"); // Находим цифры
-//            String[] operands = inputExpression.split("[+/*-]");  // Находим операнд
-
-import java.beans.PropertyEditorSupport;
-
-// Калькулятор
 class Calculator {
     public int calculate (int[] values, String operator) {
         int operand_1 = values[0];
@@ -26,13 +20,6 @@ class Calculator {
         }
 
         return result;
-
-        // Вывод результата
-//        System.out.println("________");
-//        System.out.println("Результат: " + result);
-//        System.out.println();
-
-
     }
 }
 

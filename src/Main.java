@@ -6,7 +6,7 @@ public class Main {
                 "Я Калькулятор.\n" +
                 "Я умею складывать, вычитать, делить и умножать числа от 0 до 10.\n" +
                 "Числа могут быть, как арабскими, так римскими.\n" +
-                "Римские цифры должны иметь вид типа I, VIII, IX и т.д.\n" +
+                "Римские цифры должны иметь вид типа I, VIII, IX и т.п.\n" +
                 "Выражение вводится строго по шаблону (без {}):\n" +
                 "{число}{пробел}{знак +-*/}{пробел}{число}.\n" +
                 "Например: 2 + 4 или III + IX");
@@ -14,7 +14,6 @@ public class Main {
             System.out.println("Введите выражение:");
             Scanner scanner = new Scanner(System.in);
             String myString = scanner.nextLine();
-            //        String myString = "I + III"; // Временный input для тестов
 
             CorrectInputCheck correcrInputString = new CorrectInputCheck();
             boolean resultCheckString = correcrInputString.correctInputCheck(myString);
@@ -28,7 +27,6 @@ public class Main {
                 Calculator calculator = new Calculator();
                 int result = calculator.calculate(resulrDictionary, operator);
 
-
                 // Вывод результата
                 System.out.println("________");
                 System.out.println("Ваш ответ : " + result);
@@ -38,7 +36,6 @@ public class Main {
                         "Повторите ввод.");
                 System.out.println();
             }
-
         }
     }
 }
