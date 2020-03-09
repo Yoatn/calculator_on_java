@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Test_2 {
+public class Draft {
     public static void main(String[] args) {
 //        System.out.println("Введите выражение: ");
 //        Scanner scanner = new Scanner(System.in);

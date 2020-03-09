@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class TestCodeInOneClass {
+public class DraftCodeInOneClass {
     public static void main(String[] args) {
 
         while (true) {
