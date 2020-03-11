@@ -1,7 +1,9 @@
+package src_temp;
+
 class Calculator {
-    public int calculate(int values_1, int values_2, String operator) {
-        int operand_1 = values_1;
-        int operand_2 = values_2;
+    public int calculate (int[] values, String operator) {
+        int operand_1 = values[0];
+        int operand_2 = values[1];
         int result = 0;
 
         switch (operator) {

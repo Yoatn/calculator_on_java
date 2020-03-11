@@ -1,13 +1,10 @@
+package src_temp;
+
 import java.util.HashMap;
 import java.util.Map;
 
 class Dictionary {
-    public int operand_11;
-    public int operand_22;
-    String inputString;
-
-    public Dictionary(String inputString) {
-        this.inputString = inputString;
+    public int[] dictionary(String inputString) {
 
         String[] inputArray = inputString.split(" ");
 
@@ -31,36 +28,19 @@ class Dictionary {
         Integer  operand_2 = romeArabicDict.get(inputArray[2]);
 
         if (operand_1 != null && operand_2 != null) {
-            operand_11 = romeArabicDict.get(inputArray[0]);
-            operand_22 = romeArabicDict.get(inputArray[2]);
+            operand_1 = romeArabicDict.get(inputArray[0]);
+            operand_2 = romeArabicDict.get(inputArray[2]);
 
         } else {
-            operand_11 = Integer.parseInt(inputArray[0]);
-            operand_22 = Integer.parseInt(inputArray[2]);
+            operand_1 = Integer.parseInt(inputArray[0]);
+            operand_2 = Integer.parseInt(inputArray[2]);
         }
 
-    }
+        int[] operands = new int[2];
+        operands[0] = operand_1;
+        operands[1] = operand_2;
 
-    //        public void setOperand_1(int operand_1){
-//            this.operand_1 = operand_1;
-//        }
-//
-//    public void setOperand_2(int operand_2){
-//        this.operand_2 = operand_2;
-//    }
-//
-    public int getOperand_1() {
-        return operand_11;
-    }
+        return operands;
 
-    public int getOperand_2() {
-        return operand_22;
     }
 }
-
-
-//        int[] operands = new int[2];
-//        operands[0] = operand_1;
-//        operands[1] = operand_2;
-
-//        return operands;

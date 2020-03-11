@@ -1,3 +1,9 @@
+package src_temp;
+
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Scanner;
+
 public class CorrectInputCheck {
     public boolean correctInputCheck(String inputString) {
         boolean result;

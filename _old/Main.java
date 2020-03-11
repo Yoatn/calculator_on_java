@@ -1,3 +1,5 @@
+package src_temp;
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,12 +23,11 @@ public class Main {
             if (resultCheckString) {
                 String operator = myString.split(" ")[1];
 
-                Dictionary dictionary = new Dictionary(myString);
-                int resulrDictionary_1 = dictionary.getOperand_1();
-                int resulrDictionary_2 = dictionary.getOperand_2();
+                Dictionary dictionary = new Dictionary();
+                int[] resulrDictionary = dictionary.dictionary(myString);
 
                 Calculator calculator = new Calculator();
-                int result = calculator.calculate(resulrDictionary_1, resulrDictionary_2, operator);
+                int result = calculator.calculate(resulrDictionary, operator);
 
                 // Вывод результата
                 System.out.println("________");
