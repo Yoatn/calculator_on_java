@@ -24,12 +24,12 @@ public class Main {
 
                 // Проверяем и изменяем значения с римских на арабские
                 Dictionary dictionary = new Dictionary(myString);
-                int resulrDictionary_1 = dictionary.getOperand_1();
-                int resulrDictionary_2 = dictionary.getOperand_2();
+                int resultDictionary_1 = dictionary.getOperand_1();
+                int resultDictionary_2 = dictionary.getOperand_2();
 
 
                 Calculator calculator = new Calculator();
-                int result = calculator.calculate(resulrDictionary_1, resulrDictionary_2, operator);
+                int result = calculator.calculate(resultDictionary_1, resultDictionary_2, operator);
 
                 // Вывод результата
                 System.out.println("________");
