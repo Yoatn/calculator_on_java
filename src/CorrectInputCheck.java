@@ -11,8 +11,3 @@ public class CorrectInputCheck {
         return result;
     }
 }
-
-
-// ^\d{1,2}\s[\-|\+|\*|\/]\s\d{1,2} arabic
-// ^(I|II|III|IV|V|VI|VII|VIII|IX|X)\s[\-|\+|\*|\/]\s(I|II|III|IV|V|VI|VII|VIII|IX|X)$ rome
-// ^([0-9]|10)\s[\-|\+|\*|\/]\s([0-9]|10)$|^(I|II|III|IV|V|VI|VII|VIII|IX|X)\s[\-|\+|\*|\/]\s(I|II|III|IV|V|VI|VII|VIII|IX|X)$

@@ -15,15 +15,18 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String myString = scanner.nextLine();
 
-            CorrectInputCheck correcrInputString = new CorrectInputCheck();
-            boolean resultCheckString = correcrInputString.correctInputCheck(myString);
+            CorrectInputCheck correctInputString = new CorrectInputCheck();
+            boolean resultCheckString = correctInputString.correctInputCheck(myString);
 
             if (resultCheckString) {
+                // Арифметический знак
                 String operator = myString.split(" ")[1];
 
+                // Проверяем и изменяем значения с римских на арабские
                 Dictionary dictionary = new Dictionary(myString);
                 int resulrDictionary_1 = dictionary.getOperand_1();
                 int resulrDictionary_2 = dictionary.getOperand_2();
+
 
                 Calculator calculator = new Calculator();
                 int result = calculator.calculate(resulrDictionary_1, resulrDictionary_2, operator);
