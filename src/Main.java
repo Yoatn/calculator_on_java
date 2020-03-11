@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String exitIn;
+        String exit = "exit";
+
         System.out.println("Приветствую!\n" +
                 "Я Калькулятор.\n" +
                 "Я умею складывать, вычитать, делить и умножать числа от 0 до 10.\n" +
@@ -9,11 +12,14 @@ public class Main {
                 "Римские цифры должны иметь вид типа I, VIII, IX и т.п.\n" +
                 "Выражение вводится строго по шаблону (без {}):\n" +
                 "{число}{пробел}{знак +-*/}{пробел}{число}.\n" +
-                "Например: 2 + 4 или III + IX");
-        while (true) {
+                "Например: 2 + 4 или III + IX\n" +
+                "Для выхода наберите exit");
+
+        do {
             System.out.println("Введите выражение:");
             Scanner scanner = new Scanner(System.in);
             String myString = scanner.nextLine();
+            exitIn = myString;
 
             CorrectInputCheck correctInputString = new CorrectInputCheck();
             boolean resultCheckString = correctInputString.correctInputCheck(myString);
@@ -37,10 +43,14 @@ public class Main {
             } else {
                 System.out.println("Выражение не соответствует шаблону.\n" +
                         "Повторите ввод.");
+                System.out.println();
             }
-            System.out.println();
-        }
+
+        // Выход из бесконечного цикла
+        } while (!exit.equals(exitIn)); // Вопрос: Почему нельзя сразу equals(myString)?
+        System.out.println("До свидания!");
     }
+
 }
 
 
