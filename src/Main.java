@@ -34,12 +34,11 @@ public class Main {
                 // Вывод результата
                 System.out.println("________");
                 System.out.println("Ваш ответ : " + result);
-                System.out.println();
             } else {
                 System.out.println("Выражение не соответствует шаблону.\n" +
                         "Повторите ввод.");
-                System.out.println();
             }
+            System.out.println();
         }
     }
 }

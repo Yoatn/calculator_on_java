@@ -9,6 +9,7 @@ class Dictionary {
     public Dictionary(String inputString) {
         this.inputString = inputString;
 
+        // Создание ммасива из строки по пробелу
         String[] inputArray = inputString.split(" ");
 
         // Создание словаря
@@ -39,11 +40,11 @@ class Dictionary {
             operand_2 = Integer.parseInt(inputArray[2]);
         }
     }
-
+    // Возврат значений
     public int getOperand_1() {
         return operand_1;
-
     }
+
     public int getOperand_2() {
         return operand_2;
     }
