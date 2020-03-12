@@ -4,6 +4,7 @@ import java.util.Map;
 class Dictionary {
     private int operand_1;
     private int operand_2;
+    private boolean statusRome; // Статус входящей строки (римские = true)
     String inputString;
 
     public Dictionary(String inputString) {
@@ -28,24 +29,34 @@ class Dictionary {
         romeArabicDict.put("X", 10);
 
         //Проверяем на наличе в словаре
-        Integer  value_1 = romeArabicDict.get(inputArray[0]);
-        Integer  value_2 = romeArabicDict.get(inputArray[2]);
+        Integer value_1 = romeArabicDict.get(inputArray[0]);
+        Integer value_2 = romeArabicDict.get(inputArray[2]);
 
+        // Если римские, берём значение из словаря по ключу
         if (value_1 != null && value_2 != null) {
             operand_1 = romeArabicDict.get(inputArray[0]);
             operand_2 = romeArabicDict.get(inputArray[2]);
+            statusRome = true;
 
+            // Если арабские, меняем String на int
         } else {
             operand_1 = Integer.parseInt(inputArray[0]);
             operand_2 = Integer.parseInt(inputArray[2]);
+            statusRome = false;
         }
     }
-    // Возврат значений
+
+    // Возврат значения
     public int getOperand_1() {
         return operand_1;
     }
 
     public int getOperand_2() {
         return operand_2;
+    }
+
+    // Возврат статуса входящей строки
+    public boolean getStatusRome() {
+        return statusRome;
     }
 }

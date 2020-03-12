@@ -37,9 +37,18 @@ public class Main {
                 Calculator calculator = new Calculator();
                 int result = calculator.calculate(resultDictionary_1, resultDictionary_2, operator);
 
-                // Вывод результата
-                System.out.println("________");
-                System.out.println("Ваш ответ : " + result);
+                // результат проверки арабские или римские
+                boolean statusRome = dictionary.getStatusRome();
+
+                if (statusRome) { // Вывод результата если римские
+                    new ArabicToRome(result);
+                    /*Вопрос к ментору: Можно ли так делат? В ArabicToRome вместо return писать soutЫ и в Main просто вызывать.
+                    * Или нужно обязательно через return делать?*/
+
+                } else { // Вывод результата если арабские
+                    System.out.println("________");
+                    System.out.println("Ваш ответ: " + result);
+                }
             } else {
                 System.out.println("Выражение не соответствует шаблону.\n" +
                         "Повторите ввод.");
@@ -47,7 +56,7 @@ public class Main {
             }
 
         // Выход из бесконечного цикла
-        } while (!exit.equals(exitIn)); // Вопрос: Почему нельзя сразу equals(myString)?
+        } while (!exit.equals(exitIn)); // Вопрос к ментору: Почему нельзя сразу equals(myString)?
         System.out.println("До свидания!");
     }
 
