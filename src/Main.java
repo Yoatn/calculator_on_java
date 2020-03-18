@@ -42,9 +42,6 @@ public class Main {
 
                 if (statusRome) { // Вывод результата если римские
                     new ArabicToRome(result);
-                    /*Вопрос к ментору: Можно ли так делат с точки зрения построения логики приложения?
-                     т.е. в ArabicToRome вместо return писать soutЫ и в Main просто вызывать.
-                    * Или нужно обязательно через return делать?*/
 
                 } else { // Вывод результата если арабские
                     System.out.println("________");
@@ -57,7 +54,7 @@ public class Main {
             }
 
         // Выход из бесконечного цикла
-        } while (!exit.equals(exitIn)); // Вопрос к ментору: Почему нельзя сразу equals(myString)?
+        } while (!exit.equals(exitIn));
         System.out.println("До свидания!");
     }
 
